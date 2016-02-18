@@ -4,7 +4,7 @@ from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://yourface:rocks@localhost/yourfaceDB'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 admin = Admin(app)
